@@ -14,3 +14,14 @@ gcloud compute instances create testvm \ --network test-vpc \
 --machinetype "e2-standard-2" \
 --image-family "ubuntu" \
 --subnet "default"
+
+gcloud compute instances create sqlvm \ --network test-vpc \
+--machinetype "e2-standard-4" \
+--image-family "ubuntu" \
+--subnet "default"
+
+ssh sqlvm
+sudo apt -y install postgresql
+
+sudo u postgres psql testuser
+
