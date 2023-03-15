@@ -1,0 +1,16 @@
+###Steps to deploy hosts using IAC####
+##first thing we need is a project"
+Provider "google"{
+ project = "test project"
+ region = "europe-west"
+ zone = "europe-west"
+}
+
+###need virtual private connections###
+gcloud compute networks create test-vpc
+
+###Configure the machine with required compute"
+gcloud compute instances create testvm \ --network test-vpc \
+--machinetype "e2-standard-2" \
+--image-family "ubuntu" \
+--subnet "default"
