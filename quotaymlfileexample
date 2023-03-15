@@ -1,0 +1,30 @@
+####Challenge 2####
+
+##Create PODs and set the limits###
+apiversion: 1
+kind: pod
+metadata:
+ name: ResourceQuota
+spec:
+ containers:
+  -name: Pod A
+   resources: 
+    requests: 
+     memory: "400MB"
+     cpu: "2"
+    limits:
+     memory: "400MB"
+     cpu: "2"
+  -name: POD B
+   resources: 
+    requests: 
+     memory: "200MB"
+     cpu: "2"
+    limits:
+     memory: "200MB"
+     cpu: "2"
+  -name : POD C
+    resources:
+     requests:
+      memory: "400MB"
+      cpu: "2"
