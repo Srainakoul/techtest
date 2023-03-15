@@ -1,1 +1,2 @@
-kubectl cretae -f quotaymlexample.yml
+kubectl cretae -f quotaymlfileexample.yml
+kubectl describe quota
